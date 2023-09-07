@@ -20,7 +20,7 @@ export default function NavBar() {
       </div>
       <ul className="nav-links">
         <li>
-          <a href="index.html" className="font-bold animated-link dark:text-black">
+          <a href="index.html" className="pagina-seleccionada font-bold dark:text-black">
             Inicio
           </a>
         </li>

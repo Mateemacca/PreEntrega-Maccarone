@@ -9,7 +9,7 @@ function App() {
   return (
     <>
      <NavBar />
-     <ItemListContainer greeting="Hola, bienvenido a mi tienda en linea" />
+     <ItemListContainer greeting="Bienvenido a Blest BarberShop" />
      <Index />
     </>
   )

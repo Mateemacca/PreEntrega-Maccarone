@@ -1,6 +1,6 @@
 import React from 'react'
 import 'tailwindcss/tailwind.css';
-export default function TextoIndex() {
+export default function Index() {
   return (
     <div className="page-container align-middle h-full flex mx-auto my-48 flex-col contenedor-texto-blest  ">
     <div className="flex justify-center align-middle top-0">

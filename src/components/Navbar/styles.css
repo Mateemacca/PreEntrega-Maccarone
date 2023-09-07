@@ -7,22 +7,33 @@
     font-family: system-ui;
   transition: opacity .3s ease;
   }
-  
+  .pagina-seleccionada{
+    text-decoration: underline !important;
+    text-decoration-thickness: 2px !important;
+    text-underline-offset: 5px !important;
+    text-decoration-color: #fff !important;
+  }
+
+  .pagina-seleccionada:hover::before{
+    display: block !important;
+  }
   .animated-link:hover{
     opacity: .9;
   }
   .animated-link::before {
     content: "";
     position: absolute;
-    bottom: -21.25px;
     left: 0;
     width: 0;
-    height: 2.75px;
+    height: 2px;
     background-color: #ffffff;
     transition: width 0.3s ease, right 0.3s ease;
     border-radius: 5px;
     font-size: 25px;
+    margin: 20px auto;
+    top: 1.5px;
   }
+ 
   
   
   .animated-link:hover::before {
@@ -30,6 +41,9 @@
     left: 0;
     transition: width 0.3s ease, right 0.3s ease;
     font-size: 25px;
+    margin: 20px auto;
+    height: 2px;
+    top: 1.5px;
   }
   
   .animated-link::before {
@@ -37,6 +51,7 @@
     left: 100%;
     transition: width 0.3s ease, left 0.3s ease;
     font-size: 25px;
+    height: 2px;
   }
   nav{
     
@@ -72,7 +87,7 @@
     justify-content: space-evenly;
     align-items: center;
     text-transform: uppercase;
-    
+
 }
 .nav-links li a{
     text-decoration: none;
@@ -87,25 +102,11 @@
     position: relative;
 }
 
-.nav-links li a::before {
-    content: "";
-    display: block;
-    height: 1.5px;
-    width: 0%;
-    background-color: #ffffff;
-    position: absolute;
-    transition: width 0.3s ease, left 0.3s ease;
-    margin: 20px auto;
-}
-
-.nav-links li a:hover::before{
-    width: 100%;
-    margin: 20px auto;
-  
-
-}
 
 
+
+    
+    
 .login-button{
     background-color: black;
     border: 1.5px solid #ffffff;
