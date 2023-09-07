@@ -1,0 +1,14 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+body {
+    background-color: #111111;
+}
+body{
+    overflow-x:hidden;
+    overflow-y: hidden;
+}
+
+strong{
+    text-shadow:0px 0px 50px #fff,0px 0px 10px #ffffff;
+}
