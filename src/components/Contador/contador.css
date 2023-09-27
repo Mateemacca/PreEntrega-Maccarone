@@ -1,0 +1,24 @@
+.countBtn {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 3px 6px;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+  .countBtn:hover {
+    border-color: #646cff;
+  }
+  .countBtn:focus,
+  .countBtn:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+  .maximo {
+    cursor:no-drop ;
+    opacity: .3;
+  
+  }
+  

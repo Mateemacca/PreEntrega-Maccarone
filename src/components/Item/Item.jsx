@@ -1,28 +1,57 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-export default function Item({id, nombre, precio, descripcion, image}) {
+import React from "react";
+import "./item.css";
+import { Link } from "react-router-dom";
+export default function Item({ id, nombre, precio, descripcion, image }) {
   return (
-    <div className="max-w-sm max-h-[65vh] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-    
-        <img className=" w-[400px] h-[400px] rounded-t-lg" src={image}/>
-   
-    <div className="p-5">
-        <a href="#">
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{nombre}</h5>
-        </a>
-        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{descripcion}</p>
-        <span className='text-white'>{precio}</span>
-        <Link to={`/product/${id}`} className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-        Ver Detalle
-             <svg className="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-            </svg>
-        </Link>
+    <div className="container flex justify-center product-item">
+      <div className="max-w-sm ">
+        <div className="bg-white relative shadow-lg hover:shadow-xl transition duration-500 rounded-lg">
+          <Link to={`/product/${id}`}>
+            <img
+              className="rounded-t-lg w-[400px] h-[400px]"
+              src={image}
+              alt=""
+            />
+          </Link>
+          <div className="py-6 px-8 rounded-lg bg-white">
+            <Link to={`/product/${id}`}>
+              <h1 className="text-gray-700 font-bold text-2xl mb-3 hover:text-gray-900 hover:cursor-pointer truncate">
+                {nombre}
+              </h1>
+            </Link>
+            <p className="text-gray-700 tracking-wide truncate">
+              {descripcion}
+            </p>
+            <div className="flex items-center text-center mt-6">
+              <span className="text-md text-black mr-2 font-bold items-center text-center">
+                ${precio}
+              </span>
+              <Link to={`/product/${id}`}>
+                <button className="items-center text-center  py-2 px-4 bg-yellow-400 text-gray-800 font-bold rounded-lg shadow-md hover:shadow-lg transition duration-300 flex ">
+                  Ver detalle
+                  <svg
+                    className="w-3.5 h-3.5 ml-2"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
+                  >
+                    //{" "}
+                    <path
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
+                    //{" "}
+                  </svg>
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
-
-  )
+  );
 }
-
-
-
