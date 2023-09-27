@@ -13,11 +13,11 @@ export default function Products() {
   const [isLoading, setIsLoading] = useState(true)
   const [products, setProducts] = useState ([])
   useEffect(() => {
-    setIsLoading(true); // Establecer isLoading en true cuando cambia la categoría
+    setIsLoading(true); 
 
     setTimeout(() => {
       setProducts(idCategory ? filterProductsByCategory(idCategory) : productos);
-      setIsLoading(false); // Establecer isLoading en false cuando los productos están listos
+      setIsLoading(false); 
     }, 1000);
   }, [idCategory]);
 
