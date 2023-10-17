@@ -96,8 +96,10 @@ export default function Checkout() {
         console.error(error);
       }
     } else {
-      // Agregar lógica adicional en caso de que falten datos (nombre, teléfono o correo electrónico).
-      // Puedes mostrar un mensaje de error o tomar medidas apropiadas aquí.
+      Swal.fire({
+        icon: 'warning',
+        text:'Por favor completa todos los campos.',
+      })
     }
   };
 
@@ -128,15 +130,21 @@ export default function Checkout() {
             </Link>
 </div>
       {isLoading ? <LoadingSpinner /> : (
-        <>
-        <div className="text-center mx-auto flex justify-center">
+        <div className='border-2 w-[25vw] py-12 rounded-xl mx-auto'>
+        <div className="text-center mx-auto flex justify-center ">
         <SearchOrder />
       </div>
+      <hr className=" mt-8 mb-0 h-0 border-r-0 border-b-0 w-[85%] mx-auto border-l-0 border-t border-solid border-gray-300" />
 <div className="relative mx-auto flex items-center justify-center">
+  
   <form className='flex justify-center flex-col'>
-
-    <div className="relative mt-12">
-      <input type="text" className="block px-2.5 pb-2.5 pt-4 text-md w-[350px] dark:text-gray-900 text-gray-300 bg-[#111111] rounded-lg border-2 dark:border-gray-300 appearance-none focu:text-white border-gray-500 focus:border-white focus:outline-none focus:ring-0 dark:focus:border-blue-600 peer" placeholder=""
+  <h1 className='font-bold text-white text-lg text-center mt-6'>Completa todos los campos para finalizar la compra.</h1>
+      <label className='text-white font-semibold text-center mt-8'>
+        Nombre Completo
+      </label>
+    <div className="relative mt-2 mx-auto">
+    
+      <input type="text" className="mx-auto block px-2.5 pb-2.5 pt-4 text-md w-[350px] dark:text-gray-900 text-gray-300 bg-[#111111] rounded-lg border-2 dark:border-gray-300 appearance-none focu:text-white border-gray-500 focus:border-white focus:outline-none focus:ring-0 dark:focus:border-blue-600 peer" placeholder=""
             id="name"
             value={name}
             onChange={(e) => setName(e.target.value)}/>
@@ -146,10 +154,12 @@ export default function Checkout() {
     </div>
 
 
-
-    <div className="relative mt-4">
-      <input type="email" className=" block px-2.5 pb-2.5 pt-4 text-md w-[350px] dark:text-gray-900 text-gray-300 bg-[#111111] rounded-lg border-2 dark:border-gray-300 appearance-none focu:text-white border-gray-500 focus:border-white focus:outline-none focus:ring-0 dark:focus:border-blue-600 peer" placeholder=""
-            id="name"
+    <label className='text-white font-semibold text-center mt-6'>
+        Email
+      </label>
+    <div className="relative mt-2 mx-auto">
+      <input type="email" className="mx-auto block px-2.5 pb-2.5 pt-4 text-md w-[350px] dark:text-gray-900 text-gray-300 bg-[#111111] rounded-lg border-2 dark:border-gray-300 appearance-none focu:text-white border-gray-500 focus:border-white focus:outline-none focus:ring-0 dark:focus:border-blue-600 peer" placeholder=""
+            id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}/>
       <label className="pointer-events-none absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-[#111111] dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-white peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">
@@ -159,10 +169,12 @@ export default function Checkout() {
 
 
 
-
-    <div className="relative mt-4">
-      <input type="text" className="block px-2.5 pb-2.5 pt-4 text-md w-[350px] dark:text-gray-900 text-gray-300 bg-[#111111] rounded-lg border-2 dark:border-gray-300 appearance-none focu:text-white border-gray-500 focus:border-white focus:outline-none focus:ring-0 dark:focus:border-blue-600 peer" placeholder=""
-            id="name"
+    <label className='text-white font-semibold text-center mt-6'>
+        Telefono
+      </label>
+    <div className="relative mt-2 mx-auto">
+      <input type="text" className="mx-auto block px-2.5 pb-2.5 pt-4 text-md w-[350px] dark:text-gray-900 text-gray-300 bg-[#111111] rounded-lg border-2 dark:border-gray-300 appearance-none focu:text-white border-gray-500 focus:border-white focus:outline-none focus:ring-0 dark:focus:border-blue-600 peer" placeholder=""
+            id="phone"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}/>
       <label className="pointer-events-none absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-[#111111] dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-white peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">
@@ -174,7 +186,7 @@ export default function Checkout() {
         </button>
   </form>
 </div>
-</>
+</div>
 )}
     </Layout>
   );

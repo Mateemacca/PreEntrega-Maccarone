@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 export default function Footer() {
-    const logo = '../../../public/imgs/blestlogoblanco.png'
+    const logo = '/imgs/blestlogoblanco.png'
   return (
 <footer className="dark:bg-white rounded-lg shadow bg-[#161616] ">
     <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">

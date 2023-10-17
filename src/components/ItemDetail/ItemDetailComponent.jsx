@@ -124,7 +124,7 @@ export default function ItemDetail({product}) {
                     <div className="flex space-x-2 text-sm font-medium justify-center">
                     <Contador quantity={selectedQuantity} setQuantity={setSelectedQuantity} stock={product.stock} />
                     <button onClick={handleAddToCart} className="transition  inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-black px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-full hover:bg-black active:scale-[0.99] ">
-              <span>Add to Cart</span>
+              <span>Añadir al Carrito</span>
                       </button>
                     </div>
                   </div>

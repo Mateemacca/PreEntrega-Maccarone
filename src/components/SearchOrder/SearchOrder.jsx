@@ -33,7 +33,7 @@ const SearchOrder = () => {
     <div className=''>
      
         <>
-        <h2 className='text-white font-semibold mb-6 text-2xl'>Ya tienes una orden? Buscala aqui!</h2>
+        <h2 className='text-white font-semibold mb-6 text-2xl'>Ya hiciste una orden? Buscala aqui!</h2>
       <input className='bg-transparent font-bold text-white border-2 rounded-lg px-1.5 pb-1.5 pt-2 text-md uppercase focus:border-white focus:outline-none focus:ring-0 border-gray-500 placeholder:normal-case placeholder:font-normal'
         type="text"
         placeholder="Ingrese el ID de la orden"
