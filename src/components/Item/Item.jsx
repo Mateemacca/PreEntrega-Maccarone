@@ -27,7 +27,7 @@ export default function Item({ id, nombre, precio, descripcion, image }) {
                 ${precio}
               </span>
               <Link to={`/product/${id}`}>
-                <button className="items-center text-center  py-2 px-4 bg-yellow-400 text-gray-800 font-bold rounded-lg shadow-md hover:shadow-lg transition duration-300 flex ">
+                <button className="items-center text-center  py-2 px-4 bg-black text-white font-bold rounded-lg shadow-md hover:shadow-lg transition duration-300 flex ">
                   Ver detalle
                   <svg
                     className="w-3.5 h-3.5 ml-2"

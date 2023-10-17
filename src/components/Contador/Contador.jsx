@@ -1,26 +1,24 @@
-import React, { useState } from "react";
-import "./contador.css";
+import React, { useState } from 'react';
+import './contador.css';
 
-export default function Contador() {
-  const [numero, setNum] = useState(1);
-
+export default function Contador({ quantity, setQuantity, stock }) {
   const handCountPlus = () => {
-    if (numero < 15) {
-      setNum(numero + 1);
+    if (quantity < stock) {
+      setQuantity(quantity + 1);
     }
   };
 
   const handCountMinus = () => {
-    if (numero > 0) {
-      setNum(numero - 1);
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
     }
-  };
+  }
 
-  const maximoClass = numero === 15 ? "maximo" : "";
-  const minimoClass = numero === 0 ? "maximo" : "";
+  const maximoClass = quantity === stock ? 'maximo' : '';
+  const minimoClass = quantity === 1 ? 'maximo' : '';
 
   return (
-    <div className="items-center  text-center mr-4 my-auto">
+    <div className="items-center text-center mr-4 my-auto">
       <button
         type=""
         className={`${minimoClass} countBtn text-white font-bold mr-2 active:bg-gray-800`}
@@ -28,7 +26,13 @@ export default function Contador() {
       >
         -
       </button>
-      <span className="font-bold">{numero}</span>
+      <span
+        value={quantity}
+        onInput={(e) => setQuantity(parseInt(e.target.innerText, 10))}
+        className='inline-block p-0 text-center w-auto font-bold'
+      >
+        {quantity}
+      </span>
       <button
         type=""
         id="sumarbtn"

@@ -6,10 +6,8 @@ export const productos = [
     description: "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
     category: "Ropa de Hombre",
     image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-    rating: {
-      rate: 3.9,
-      count: 120
-    }
+    rate: 3.9,
+    stock:16,
   },
   {
     id: 2,
@@ -18,10 +16,8 @@ export const productos = [
     description: "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing.",
     category: "Ropa de Hombre",
     image: "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
-    rating: {
-      rate: 4.1,
-      count: 259
-    }
+    rate: 4.1,
+    stock:32,
   },
   {
     id: 3,
@@ -30,10 +26,8 @@ export const productos = [
     description: "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. ",
     category: "Ropa de Hombre",
     image: "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
-    rating: {
-      rate: 4.7,
-      count: 500
-    }
+    rate: 4.7,
+    stock:15,
   },
   {
     id: 4,
@@ -42,10 +36,8 @@ export const productos = [
     description: "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
     category: "Ropa de Hombre",
     image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
-    rating: {
-      rate: 2.1,
-      count: 430
-    }
+    rate: 2.1,
+    stock:16,
   },
   {
     id: 5,
@@ -54,10 +46,8 @@ export const productos = [
     description: "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
     category: "Joyeria",
     image: "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
-    rating: {
-      rate: 4.6,
-      count: 400
-    }
+    rate: 4.6,
+    stock:7,
   },
   {
     id: 6,
@@ -66,10 +56,8 @@ export const productos = [
     description: "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
     category: "Joyeria",
     image: "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
-    rating: {
-      rate: 3.9,
-      count: 70
-    }
+    rate: 3.9,
+    stock:15,
   },
   {
     id: 7,
@@ -78,10 +66,8 @@ export const productos = [
     description: "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
     category: "Joyeria",
     image: "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
-    rating: {
-      rate: 3,
-      count: 400
-    }
+    rate: 3,   
+    stock:11,
   },
   {
     id: 8,
@@ -90,10 +76,8 @@ export const productos = [
     description: "Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel",
     category: "Joyeria",
     image: "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
-    rating: {
-      rate: 1.9,
-      count: 100
-    }
+    rate: 1.9,
+    stock:18,
   },
   {
     id: 9,
@@ -102,10 +86,8 @@ export const productos = [
     description: "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7",
     category: "Electronica",
     image: "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
-    rating: {
-      "rate": 3.3,
-      count: 203
-    }
+    rate: 3.3,
+    stock:13,
   },
   {
     id: 10,
@@ -114,10 +96,8 @@ export const productos = [
     description: "Easy upgrade for faster boot up, shutdown, application load and response",
     category: "Electronica",
     image: "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
-    rating: {
-      "rate": 2.9,
-      count: 470
-    }
+    rate: 2.9,
+    stock:25,
   },
   {
     id: 11,
@@ -126,10 +106,8 @@ export const productos = [
     description: "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance.",
     category: "Electronica",
     image: "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
-    rating: {
-      "rate": 4.8,
-      count: 319
-    }
+    rate: 4.8,
+    stock:101,
   },
   {
     id: 12,
@@ -138,10 +116,8 @@ export const productos = [
     description: "Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer's limited warranty",
     category: "Electronica",
     image: "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg",
-    rating: {
-      rate: 4.8,
-      count: 400
-    }
+    rate: 4.8,
+    stock:25,
   },
   {
     id: 13,
@@ -150,10 +126,8 @@ export const productos = [
     description: "21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz.",
     category: "Electronica",
     image: "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg",
-    rating: {
-      rate: 2.9,
-      count: 250
-    }
+    rate: 2.9,
+    stock:50,
   },
   {
     id: 14,
@@ -162,10 +136,8 @@ export const productos = [
     description: "49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR with dual 27 inch screen side by side QUANTUM DOT (QLED) TECHNOLOGY,",
     category: "Electronica",
     image: "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg",
-    rating: {
-      rate: 2.2,
-      count: 140
-    }
+    rate: 2.2,
+    stock:24,
   },
   {
     id: 15,
@@ -174,10 +146,8 @@ export const productos = [
     description: "Note:The Jackets is US standard size, Please choose size as your usual wear Material: 100% Polyester; Detachable Liner Fabric: Warm Fleece.",
     category: "Ropa de Mujer",
     image: "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
-    rating: {
-      rate: 2.6,
-      count: 235
-    }
+    rate: 2.6,
+    stock:2,
   },
   {
     id: 16,
@@ -186,10 +156,8 @@ export const productos = [
     description: "100% POLYURETHANE(shell) 100% POLYESTER(lining) 75% POLYESTER 25% COTTON (SWEATER).",
     category: "Ropa de Mujer",
     image: "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg",
-    rating: {
-      rate: 2.9,
-      count: 340
-    }
+    rate: 2.9,
+    stock:60,
   },
   {
     id: 17,
@@ -198,10 +166,8 @@ export const productos = [
     description: "Lightweight perfet for trip or casual wear---Long sleeve with hooded, adjustable drawstring waist design. Button and zipper front closure raincoat.",
     category: "Ropa de Mujer",
     image: "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
-    rating: {
-      rate: 3.8,
-      count: 679
-    }
+    rate: 3.8,
+    stock:27,
   },
   {
     id: 18,
@@ -210,10 +176,8 @@ export const productos = [
     description: "95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem",
     category: "Ropa de Mujer",
     image: "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
-    rating: {
-      rate: 4.7,
-      count: 130
-    }
+    rate: 4.7,
+    stock:73,
   },
   {
     id: 19,
@@ -222,10 +186,8 @@ export const productos = [
     description: "100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash & Pre Shrunk for a Great Fit, Lightweight, roomy and highly breathable with moisture wicking fabric which helps to keep moisture away.",
     category: "Ropa de Mujer",
     image: "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg",
-    rating: {
-      rate: 4.5,
-      count: 146
-    }
+    rate: 4.5,
+    stock:12,
   },
   {
     id: 20,
@@ -234,9 +196,7 @@ export const productos = [
     description: "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
     category: "Ropa de Mujer",
     image: "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
-    rating: {
-      rate: 3.6,
-      count: 145
-    }
+    rate: 3.6,
+    stock:19,
   }
 ]

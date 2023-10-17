@@ -1,11 +1,12 @@
 import Layout from "../../components/Layout/Layout";
 import "./home.css";
+import { CartCtx } from "../../context/CartContext";
 export default function Home() {
   return (
     <div className=" overflow-hidden">
       <Layout>
         <div className="text-white overflow-y-hidden">
-          <div className="page-container align-middle h-full flex mx-auto my-48 flex-col contenedor-texto-blest  ">
+          <div className="page-container align-middle h-full flex mx-auto my-32 flex-col contenedor-texto-blest  ">
             <div className="flex justify-center align-middle top-0"></div>
             <div className="text-white font-extrabold text-9xl tracking-widest flex justify-center align-middle text-center items-center mx-5 we-are-blest-text dark:text-black top-0">
               <h1>

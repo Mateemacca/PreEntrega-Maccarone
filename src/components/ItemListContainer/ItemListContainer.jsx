@@ -7,8 +7,3 @@ export default function ItemListContainer() {
     </div>
   );
 }
-  
-
-    // <div className="bg-[#111111] mt-4  flex justify-center">
-    //   <span className="text-white gradient-text">{props.greeting}</span>
-    // </div>
