@@ -8,7 +8,7 @@
 
 <h2>🚀 Demo</h2>
 
-[https://pre-entrega-maccarone-5cqyocxhj-mateemacca.vercel.app/](https://pre-entrega-maccarone-5cqyocxhj-mateemacca.vercel.app/)
+[https://pre-entrega-maccarone-cbfiln2ja-mateemacca.vercel.app/](https://pre-entrega-maccarone-cbfiln2ja-mateemacca.vercel.app/)
 <br><br>
 <h2>Algunas screenshots del proyecto:</h2>
 
