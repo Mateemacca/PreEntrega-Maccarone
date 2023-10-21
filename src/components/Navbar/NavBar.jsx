@@ -26,7 +26,7 @@ export default function NavBar() {
         <div className={`line2 ${menuOpen ? 'open' : ''}`}></div>
         <div className={`line3 ${menuOpen ? 'open' : ''}`}></div>
       </div>
-      <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
+      <ul className={`nav-links z-6 ${menuOpen ? 'open' : ''}`}>
         <li className={`${location.pathname === '/' ? 'pagina-seleccionada' : 'animated-link'} ${menuOpen ? 'fade' : ''}`}>
           <Link to={'/'} className="font-bold dark:text-black">
             Inicio

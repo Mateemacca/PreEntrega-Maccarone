@@ -9,7 +9,7 @@ function CategoryMenu() {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const productsRef = collection(db, 'Productos d'); // Reemplaza 'productos' con el nombre de tu colección de productos en Firestore.
+        const productsRef = collection(db, 'Productos d'); 
         const querySnapshot = await getDocs(productsRef);
         const categorySet = new Set();
 
@@ -23,7 +23,7 @@ function CategoryMenu() {
         const uniqueCategories = Array.from(categorySet);
         setCategories(uniqueCategories);
       } catch (error) {
-        console.error('Error al obtener categorías:', error);
+        console.error('Error al obtener categorias:', error);
       }
     };
 

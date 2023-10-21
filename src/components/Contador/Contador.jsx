@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import './contador.css';
 
 export default function Contador({ quantity, setQuantity, stock }) {
-  const handCountPlus = () => {
+  const handleCountSumar = () => {
     if (quantity < stock) {
       setQuantity(quantity + 1);
     }
   };
 
-  const handCountMinus = () => {
+  const handleCountRestar = () => {
     if (quantity > 1) {
       setQuantity(quantity - 1);
     }
@@ -22,7 +22,7 @@ export default function Contador({ quantity, setQuantity, stock }) {
       <button
         type=""
         className={`${minimoClass} countBtn text-white font-bold mr-2 active:bg-gray-800`}
-        onClick={handCountMinus}
+        onClick={handleCountRestar}
       >
         -
       </button>
@@ -37,7 +37,7 @@ export default function Contador({ quantity, setQuantity, stock }) {
         type=""
         id="sumarbtn"
         className={`${maximoClass} countBtn text-white font-bold ml-2 active:bg-gray-800`}
-        onClick={handCountPlus}
+        onClick={handleCountSumar}
       >
         +
       </button>

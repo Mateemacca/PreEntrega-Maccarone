@@ -1,24 +1,12 @@
 import React from 'react'
 import 'tailwindcss/tailwind.css';
 import { FaCartShopping } from 'react-icons/fa6';
-// import { collection, getFirestore } from 'firebase/firestore';
 import { useContext } from 'react'
 import { CartCtx } from '../../context/CartContext'
 import { Link } from 'react-router-dom';
 
 export default function CartWidget() {
   const {cart} = useContext(CartCtx)
-//   const sendOrder = () => {
-//     const order = {
-//         buyer: {name: "Mateo", phone: '+54 9 11 2302-4321', email:"mateo@gmail.com"},
-//         items:[{name:"Rasuradora", price: 300}],
-//         total:300
-//     };
-//     const db = getFirestore()
-//     const ordersCollection = collection(db,"orders")
-
-// }
-console.log('Contenido del carrito:', cart);
   return (
     <div>
     <Link to={'/cart'}>

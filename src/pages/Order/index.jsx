@@ -9,21 +9,13 @@ import './order.css'
 function OrderPage() {
     const { orderID } = useParams();
     const [order, setOrder] = useState(null);
-    // Define una función asincrónica para obtener la orden
   const fetchOrder = async () => {
     try {
-      // Crea una referencia al documento de la orden en Firestore
       const orderRef = doc(db, 'orders', orderID);
-
-      // Obtiene la información de la orden desde Firestore
       const orderSnapshot = await getDoc(orderRef);
 
-      // Comprueba si el documento existe
       if (orderSnapshot.exists()) {
-        // Accede a los atributos de la orden
         const orderData = orderSnapshot.data();
-
-        // Establece la orden en el estado local
         setOrder(orderData);
        
       } else {
@@ -34,7 +26,6 @@ function OrderPage() {
     }
   };
   
-    // Llama a la función para obtener la orden cuando el componente se monta
     useEffect(() => {
       fetchOrder();
     }, []);
@@ -63,7 +54,7 @@ function OrderPage() {
           <div className="flow-root">
             <ul className="-my-8">
             {order.products.map((product, index) => (
-              <li className="flex flex-col space-y-3 py-6 text-left sm:flex-row sm:space-x-5 sm:space-y-0">
+              <li key={index} className="flex flex-col space-y-3 py-6 text-left sm:flex-row sm:space-x-5 sm:space-y-0">
                 <div className="shrink-0 relative">
                   <span className="absolute top-1 left-1 flex h-6 w-6 items-center justify-center rounded-full border bg-white text-sm font-medium text-gray-500 shadow sm:-top-2 sm:-right-2">{product.quantity}</span>
                   <img className="h-24 w-24 max-w-full rounded-lg object-cover" src={product.image} alt="" />

@@ -85,28 +85,25 @@ const handleFinalizarCompra = async () => {
     total: total,
   };
 
-  // Obtiene una referencia a la colección 'orders' en Firestore usando la instancia db
+  // Referencia a la colección orders de Firestore 
   const ordersCollection = collection(db, 'orders');
   const orderDocRef = doc(ordersCollection, orderID);
 
   try {
     setIsLoading(true)
-    // Agrega la orden a Firestore usando addDoc
     await setDoc(orderDocRef, orderData);
     setIsLoading(false);
-    // docRef contiene información sobre el documento recién agregado (incluyendo su ID)
     console.log('Orden creada con exito. ID de la orden:', orderID);
 
-    // Limpia el carrito
+
     limpiarCarrito();
-    toast.success('¡Compra realizada con exito!');
+    toast.success('Compra realizada con exito!');
     Swal.fire({
       title: 'Excelente!',
       text: `La compra fue realizada con exito bajo el id: ${orderID}`,
       icon: 'success',
-      showCancelButton: true,
-      confirmButtonText: 'Sí',
-      cancelButtonText: 'No',
+      showCancelButton: false,
+      confirmButtonText: 'ok',
     })
   } catch (error) {
     toast.error('Error al realizar la compra.');
@@ -115,11 +112,11 @@ const handleFinalizarCompra = async () => {
 };
   const handleVaciarCarritoAlert = () => {
     Swal.fire({
-      title: '¿Vaciar Carrito?',
-      text: '¿Estás seguro de que deseas vaciar el carrito?',
+      title: 'Vaciar Carrito?',
+      text: 'Estas seguro de que queres vaciar el carrito?',
       icon: 'question',
       showCancelButton: true,
-      confirmButtonText: 'Sí',
+      confirmButtonText: 'Si',
       cancelButtonText: 'No',
     }).then((result) => {
       if (result.isConfirmed) {
@@ -137,13 +134,13 @@ const handleFinalizarCompra = async () => {
   const confirmarEliminacion = (productId, productName, selectedQuantity, productImage) => {
     Swal.fire({
       title: '¿Eliminar producto del carrito?',
-      text: `¿Estás seguro de que deseas eliminar ${selectedQuantity}x ${productName}(s) del carrito?`,
+      text: `Estas seguro de que deseas eliminar ${selectedQuantity}x ${productName}(s) del carrito?`,
       icon: '',
-      imageUrl: productImage, // Agrega la imagen del producto
-      imageWidth: 150, // Ajusta el ancho de la imagen según tus preferencias
-      imageAlt: 'Producto', // Texto alternativo de la imagen
+      imageUrl: productImage, 
+      imageWidth: 150, 
+      imageAlt: 'Producto',
       showCancelButton: true,
-      confirmButtonText: 'Sí',
+      confirmButtonText: 'Si',
       cancelButtonText: 'No',
     }).then((result) => {
       if (result.isConfirmed) {

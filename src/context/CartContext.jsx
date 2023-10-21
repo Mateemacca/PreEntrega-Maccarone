@@ -9,7 +9,7 @@ const CartContext = ({ children }) => {
     return savedCart ? JSON.parse(savedCart) : [];
   });
 
-  // Funcion para agregar productos al carrito
+  // funcion para agregar productos al carrito
   const addToCart = (idProduct, selectedQuantity) => {
     const findProduct = products.find((product) => product.id === idProduct);
 

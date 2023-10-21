@@ -25,7 +25,7 @@ export default function ItemDetail() {
     console.log(product)
     setIsLoading(false);
   }else{
-    console.log("no existe")
+    console.log("No existe")
   }
    })
   

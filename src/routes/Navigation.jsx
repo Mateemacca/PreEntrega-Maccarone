@@ -24,11 +24,11 @@ const routes = createBrowserRouter ([
         element: <CartPage />
     },
     {
-        path: '/order/:orderID', // Nueva ruta para detalles de la orden
+        path: '/order/:orderID', 
         element: <OrderPage />
       },
       {
-        path: '/checkout', // Nueva ruta para detalles de la orden
+        path: '/checkout',
         element: <CheckoutPage />
       },
     {

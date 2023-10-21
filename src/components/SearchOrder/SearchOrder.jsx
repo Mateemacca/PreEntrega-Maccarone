@@ -12,7 +12,7 @@ const SearchOrder = () => {
   const handleSearch = async () => {
     setIsLoading(true)
 
-    // Realiza una consulta para buscar la orden por ID
+    // consulta q para buscar la orden por id
     const ordersCollection = collection(db, 'orders');
     const q = query(ordersCollection, where('orderID', '==', orderID));
     const querySnapshot = await getDocs(q);
@@ -24,7 +24,6 @@ const SearchOrder = () => {
         icon:'error'
       });
     } else {
-      // Redirige a la página de la orden y pasa el ID como parámetro
       navigate(`/order/${orderID}`);
     }
   };

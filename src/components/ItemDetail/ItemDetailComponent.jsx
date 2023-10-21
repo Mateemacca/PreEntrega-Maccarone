@@ -3,10 +3,8 @@ import Contador from '../Contador/Contador';
 import { useState, useContext} from 'react';
 import { CartCtx } from '../../context/CartContext';
 import toast from 'react-hot-toast';
-
 export default function ItemDetail({product}) {
   const [toggle, setToggle] = useState(true);
-  const [selectedSize, setSelectedSize] = useState(null);
   const { addToCart } = useContext(CartCtx);
   const [selectedQuantity, setSelectedQuantity] = useState(1);
     const truncateToggle = () => {

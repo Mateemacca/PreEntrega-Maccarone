@@ -9,6 +9,7 @@ import SearchOrder from '../../components/SearchOrder/SearchOrder';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner';
+import toast from 'react-hot-toast';
 import './checkout.css'
 export default function Checkout() {
   const [isLoading, setIsLoading] = useState(false);
@@ -49,6 +50,10 @@ export default function Checkout() {
     localStorage.removeItem("cart");
   }
   const handleFinalizarCompra = async () => {
+    if (cart.length === 0) {
+     toast.error("No tenes items en el carrito")
+      return; 
+    }
     
     if (name && phone && email) {
       const orderID = generarOrderId();
@@ -68,31 +73,22 @@ export default function Checkout() {
         total: total,
       };
       
-      // Obtiene una referencia a la colección 'orders' en Firestore usando la instancia db
       const ordersCollection = collection(db, 'orders');
       const orderDocRef = doc(ordersCollection, orderID);
       
       try {
         setIsLoading(true);
-        // Agrega la orden a Firestore usando setDoc
         await setDoc(orderDocRef, orderData);
         setIsLoading(false);
-        // docRef contiene información sobre el documento recién agregado (incluyendo su ID)
         console.log('Orden creada con éxito. ID de la orden:', orderID);
-      
-        // Limpia el carrito
         limpiarCarrito();
-        // toast.success('¡Compra realizada con éxito!'); // Asegúrate de que la función toast esté definida y funcionando correctamente.
         Swal.fire({
           title: 'Excelente!',
           text: `La compra fue realizada con éxito bajo el ID: ${orderID}`,
           icon: 'success',
-          showCancelButton: true,
-          confirmButtonText: 'Sí',
-          cancelButtonText: 'No',
+          confirmButtonText: 'Ok',
         });
       } catch (error) {
-        // toast.error('Error al realizar la compra.'); // Asegúrate de que la función toast esté definida y funcionando correctamente.
         console.error(error);
       }
     } else {
@@ -103,14 +99,10 @@ export default function Checkout() {
     }
   };
 
-
-
-
-  
   return (
     <Layout>
       <div className='flex items-center gap-2 font-bold mt-[-30px] mb-12 ml-4'>
-<svg
+            <svg
               className="w-3.5 h-3.5 ml-2 transform rotate-180 text-white"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
@@ -130,7 +122,7 @@ export default function Checkout() {
             </Link>
 </div>
       {isLoading ? <LoadingSpinner /> : (
-        <div className='border-2 w-[25vw] py-12 rounded-xl mx-auto'>
+        <div className='border-2 w-[420px] py-12 rounded-xl mx-auto'>
         <div className="text-center mx-auto flex justify-center ">
         <SearchOrder />
       </div>
@@ -143,31 +135,28 @@ export default function Checkout() {
         Nombre Completo
       </label>
     <div className="relative mt-2 mx-auto">
-    
+  
       <input type="text" className="mx-auto block px-2.5 pb-2.5 pt-4 text-md w-[350px] dark:text-gray-900 text-gray-300 bg-[#111111] rounded-lg border-2 dark:border-gray-300 appearance-none focu:text-white border-gray-500 focus:border-white focus:outline-none focus:ring-0 dark:focus:border-blue-600 peer" placeholder=""
             id="name"
             value={name}
             onChange={(e) => setName(e.target.value)}/>
-      <label className=" pointer-events-none absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-[#111111] dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-white peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">
+      <label className=" pointer-events-none absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-2 origin-[0] bg-[#111111] dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-white peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">
       Nombre Completo
       </label>
     </div>
-
 
     <label className='text-white font-semibold text-center mt-6'>
         Email
       </label>
     <div className="relative mt-2 mx-auto">
-      <input type="email" className="mx-auto block px-2.5 pb-2.5 pt-4 text-md w-[350px] dark:text-gray-900 text-gray-300 bg-[#111111] rounded-lg border-2 dark:border-gray-300 appearance-none focu:text-white border-gray-500 focus:border-white focus:outline-none focus:ring-0 dark:focus:border-blue-600 peer" placeholder=""
+      <input type="email" className="mx-auto block px-2.5 pb-2.5 pt-4 text-md w-[350px] dark:text-gray-900 text-gray-300 bg-[#111111] rounded-lg border-2  dark:border-gray-300 appearance-none focu:text-white border-gray-500 focus:border-white focus:outline-none focus:ring-0 dark:focus:border-blue-600 peer" placeholder=""
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}/>
-      <label className="pointer-events-none absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-[#111111] dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-white peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">
+      <label className="pointer-events-none absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-2 origin-[0] bg-[#111111] dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-white peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">
       Direccion Email
       </label>
     </div>
-
-
 
     <label className='text-white font-semibold text-center mt-6'>
         Telefono
@@ -177,7 +166,7 @@ export default function Checkout() {
             id="phone"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}/>
-      <label className="pointer-events-none absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-[#111111] dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-white peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">
+      <label className="pointer-events-none absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-2 origin-[0] bg-[#111111] dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-white peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">
       Numero de Telefono
       </label>
     </div>
