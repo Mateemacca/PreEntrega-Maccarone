@@ -101,9 +101,9 @@ export default function Checkout() {
 
   return (
     <Layout>
-      <div className='flex items-center gap-2 font-bold mt-[-30px] mb-12 ml-4'>
+      <div className='flex items-center gap-2 font-bold mt-[-30px] mb-12 ml-4 '>
             <svg
-              className="w-3.5 h-3.5 ml-2 transform rotate-180 text-white"
+              className="w-3.5 h-3.5 ml-2 transform rotate-180 text-white dark:text-black"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -117,60 +117,60 @@ export default function Checkout() {
                 d="M1 5h12m0 0L9 1m4 4L9 9"
               />
               </svg>
-  <Link to="/cart" className="text-white  items-center text-center">  
+  <Link to="/cart" className="text-white  items-center text-center dark:text-black">  
             Volver al carrito
             </Link>
 </div>
-      {isLoading ? <LoadingSpinner /> : (
-        <div className='border-2 w-[420px] py-12 rounded-xl mx-auto'>
+      {isLoading ? <LoadingSpinner /> : ( 
+        <div className='border-2 w-[420px] border-white dark:border-black py-12 rounded-xl mx-auto duration-100'>
         <div className="text-center mx-auto flex justify-center ">
         <SearchOrder />
       </div>
-      <hr className=" mt-8 mb-0 h-0 border-r-0 border-b-0 w-[85%] mx-auto border-l-0 border-t border-solid border-gray-300" />
-<div className="relative mx-auto flex items-center justify-center">
+      <hr className=" mt-8 mb-0 h-0 border-r-0 border-b-0 w-[85%] mx-auto border-l-0 border-t border-solid border-gray-300 dark:border-black" />
+<div className="relative mx-auto flex items-center justify-center dark:text-black">
   
   <form className='flex justify-center flex-col'>
-  <h1 className='font-bold text-white text-lg text-center mt-6'>Completa todos los campos para finalizar la compra.</h1>
-      <label className='text-white font-semibold text-center mt-8'>
+  <h1 className='font-bold text-white text-lg text-center mt-6 dark:text-black'>Completa todos los campos para finalizar la compra.</h1>
+      <label className='text-white font-semibold text-center mt-8 dark:text-black'>
         Nombre Completo
       </label>
     <div className="relative mt-2 mx-auto">
   
-      <input type="text" className="mx-auto block px-2.5 pb-2.5 pt-4 text-md w-[350px] dark:text-gray-900 text-gray-300 bg-[#111111] rounded-lg border-2 dark:border-gray-300 appearance-none focu:text-white border-gray-500 focus:border-white focus:outline-none focus:ring-0 dark:focus:border-blue-600 peer" placeholder=""
+      <input type="text" className="mx-auto block px-2.5 pb-2.5 pt-4 text-md w-[350px] dark:text-gray-900 text-gray-300 bg-[#111111] rounded-lg border-2 dark:border-gray-400 appearance-none dark:bg-[#f6f6f6] focu:text-white border-gray-500 focus:border-white focus:outline-none focus:ring-0 dark:focus:border-black peer" placeholder=""
             id="name"
             value={name}
             onChange={(e) => setName(e.target.value)}/>
-      <label className=" pointer-events-none absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-2 origin-[0] bg-[#111111] dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-white peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">
+      <label className=" pointer-events-none absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-2 origin-[0] bg-[#111111] dark:bg-[#f6f6f6] px-2 peer-focus:px-2 peer-focus:text-white peer-focus:dark:text-black peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">
       Nombre Completo
       </label>
     </div>
 
-    <label className='text-white font-semibold text-center mt-6'>
+    <label className='text-white font-semibold text-center mt-6 dark:text-black'>
         Email
       </label>
     <div className="relative mt-2 mx-auto">
-      <input type="email" className="mx-auto block px-2.5 pb-2.5 pt-4 text-md w-[350px] dark:text-gray-900 text-gray-300 bg-[#111111] rounded-lg border-2  dark:border-gray-300 appearance-none focu:text-white border-gray-500 focus:border-white focus:outline-none focus:ring-0 dark:focus:border-blue-600 peer" placeholder=""
+      <input type="email" className="mx-auto block px-2.5 pb-2.5 pt-4 text-md w-[350px] dark:text-gray-900 text-gray-300 bg-[#111111] rounded-lg border-2 dark:border-gray-400 appearance-none dark:bg-[#f6f6f6] focu:text-white border-gray-500 focus:border-white focus:outline-none focus:ring-0 dark:focus:border-black peer" placeholder=""
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}/>
-      <label className="pointer-events-none absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-2 origin-[0] bg-[#111111] dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-white peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">
+      <label className="pointer-events-none absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-2 origin-[0] bg-[#111111] dark:bg-[#f6f6f6] px-2 peer-focus:px-2 peer-focus:text-white peer-focus:dark:text-black peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">
       Direccion Email
       </label>
     </div>
 
-    <label className='text-white font-semibold text-center mt-6'>
+    <label className='text-white font-semibold text-center mt-6 dark:text-black'>
         Telefono
       </label>
     <div className="relative mt-2 mx-auto">
-      <input type="text" className="mx-auto block px-2.5 pb-2.5 pt-4 text-md w-[350px] dark:text-gray-900 text-gray-300 bg-[#111111] rounded-lg border-2 dark:border-gray-300 appearance-none focu:text-white border-gray-500 focus:border-white focus:outline-none focus:ring-0 dark:focus:border-blue-600 peer" placeholder=""
+      <input type="text" className="mx-auto block px-2.5 pb-2.5 pt-4 text-md w-[350px] dark:text-gray-900 text-gray-300 bg-[#111111] rounded-lg border-2 dark:border-gray-400 appearance-none dark:bg-[#f6f6f6] focu:text-white border-gray-500 focus:border-white focus:outline-none focus:ring-0 dark:focus:border-black peer" placeholder=""
             id="phone"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}/>
-      <label className="pointer-events-none absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-2 origin-[0] bg-[#111111] dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-white peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">
+      <label className="pointer-events-none absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-2 origin-[0] bg-[#111111] dark:bg-[#f6f6f6] px-2 peer-focus:px-2 peer-focus:text-white peer-focus:dark:text-black peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">
       Numero de Telefono
       </label>
     </div>
-    <button type="button" className='mt-4 text-white text-center w-[150px] mx-auto border-2 border-white p-2 rounded-lg hover:bg-white hover:text-black font-semibold transition ease duration-200 button-glow' onClick={handleFinalizarCompra}>
+    <button type="button" className='mt-6 text-white text-center w-[150px] mx-auto border-2 border-white p-2 rounded-lg bg-transparent hover:bg-white hover:text-black font-semibold transition dark:text-black dark:border-black ease duration-200 button-glow dark:hover:text-white dark:hover:bg-black' onClick={handleFinalizarCompra}>
           Finalizar Compra
         </button>
   </form>

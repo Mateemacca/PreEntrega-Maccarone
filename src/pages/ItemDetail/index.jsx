@@ -43,7 +43,7 @@ export default function ItemDetail() {
       <div className="flex items-center pl-5 mt-[-5vh]">
         <Link to={"/products"} className="flex items-center">
           <svg
-            className="w-3.5 h-3.5 ml-2 transform rotate-180 text-white"
+            className="w-3.5 h-3.5 ml-2 transform rotate-180 text-white dark:text-black"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -57,7 +57,7 @@ export default function ItemDetail() {
               d="M1 5h12m0 0L9 1m4 4L9 9"
             />
           </svg>
-          <h3 className="text-white mt-0 ml-2 font-bold">Volver a Productos</h3>
+          <h3 className="text-white mt-0 ml-2 font-bold dark:text-black">Volver a Productos</h3>
         </Link>
       </div>
 

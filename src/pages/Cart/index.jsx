@@ -68,48 +68,7 @@ const Cart = () => {
     limpiarCarrito()
     toast.success("Carrito vaciado con éxito");
   }
-// Funcion para finalizar la compra
-const handleFinalizarCompra = async () => {
-  // Genera un ID de orden
-  const orderID = generarOrderId();
-  const orderDate = new Date();
-  const orderData = {
-    orderID,
-    orderDate,
-    products: cart.map((product) => ({
-      productName: product.title,
-      quantity: product.selectedQuantity,
-      price: product.price,
-      image: product.image,
-    })),
-    total: total,
-  };
 
-  // Referencia a la colección orders de Firestore 
-  const ordersCollection = collection(db, 'orders');
-  const orderDocRef = doc(ordersCollection, orderID);
-
-  try {
-    setIsLoading(true)
-    await setDoc(orderDocRef, orderData);
-    setIsLoading(false);
-    console.log('Orden creada con exito. ID de la orden:', orderID);
-
-
-    limpiarCarrito();
-    toast.success('Compra realizada con exito!');
-    Swal.fire({
-      title: 'Excelente!',
-      text: `La compra fue realizada con exito bajo el id: ${orderID}`,
-      icon: 'success',
-      showCancelButton: false,
-      confirmButtonText: 'ok',
-    })
-  } catch (error) {
-    toast.error('Error al realizar la compra.');
-    console.error(error);
-  }
-};
   const handleVaciarCarritoAlert = () => {
     Swal.fire({
       title: 'Vaciar Carrito?',
@@ -161,7 +120,7 @@ const handleFinalizarCompra = async () => {
         <div>
           <table className='w-[70vw] mx-auto rounded-lg'>
             <thead>
-              <tr className='text-white text-center'>
+              <tr className='text-white text-center dark:text-black'>
                 <th>Imagen</th>
                 <th>Producto</th>
                 <th>Precio</th>
@@ -169,7 +128,7 @@ const handleFinalizarCompra = async () => {
                 <th>Subtotal por producto</th>
               </tr>
             </thead>
-            <tbody className='rounded-tr-lg font-bold rounded-lg'>
+            <tbody className='rounded-tr-lg font-bold rounded-lg dark:text-black'>
               {productosAgrupadosCart.map((product, index) => (
                 <tr
                   key={product.id}
@@ -200,18 +159,18 @@ const handleFinalizarCompra = async () => {
               ))}
             </tbody>
           </table>
-          <p className='text-center text-2xl text-white font-bold mt-4'>Total: {totalFormateado}</p>
-          <div className='flex justify-center gap-8 mt-6'>
-            <Link type="" className='text-white border-2 active:opacity-50 active:scale-[0.99] border-white p-2 rounded-lg hover:bg-white button-glow hover:text-black transition duration-200 ease font-semibold' to={'/checkout'}>
+          <p className='text-center text-2xl text-white font-bold mt-4 dark:text-black'>Total: {totalFormateado}</p>
+          <div className='flex justify-center gap-8 mt-6 dark:text-black '>
+            <Link type="" className='text-white border-2 active:opacity-50 dark:border-black dark:hover:text-white dark:hover:bg-black active:scale-[0.99] border-white p-2 rounded-lg hover:bg-white button-glow hover:text-black transition duration-200 ease font-semibold dark:text-black' to={'/checkout'}>
               Finalizar Compra
             </Link>
-            <button type="" className='text-white border-2 active:opacity-50 active:scale-[0.99] border-white p-2 rounded-lg hover:bg-white button-glow hover:text-black transition duration-200 ease font-semibold' onClick={handleVaciarCarritoAlert}>
+            <button type="" className='dark:text-black dark:hover:text-white dark:hover:bg-black  dark:border-black text-white border-2 active:opacity-50 active:scale-[0.99] border-white p-2 rounded-lg hover:bg-white button-glow hover:text-black transition duration-200 ease font-semibold' onClick={handleVaciarCarritoAlert}>
               Vaciar Carrito
             </button>
           </div>
         </div>
       ) : (
-        <p className="text-white text-center font-bold text-2xl">No tenes productos en tu carrito.</p>
+        <p className="text-white text-center font-bold text-2xl dark:text-black">No tenes productos en tu carrito.</p>
       )
       )}
       

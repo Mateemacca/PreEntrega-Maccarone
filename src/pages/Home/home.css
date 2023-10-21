@@ -1,0 +1,24 @@
+@media only screen and (max-width:510px) {  
+    .we-are-blest-text{
+        font-size: 6rem !important;
+        line-height: 1;
+    }
+    .my-32{
+        margin: 1rem 0 !important;
+    }
+}
+@media only screen and (max-width:800px) {  
+    
+    .my-32{
+        margin: 1rem 0 !important;
+    }
+}
+@media only screen and (max-width:375px) {  
+    .we-are-blest-text{
+        font-size: 5rem !important;
+        line-height: 1;
+    }
+    .my-32{
+        margin: 1rem 0 !important;
+    }
+}

@@ -32,16 +32,16 @@ function CategoryMenu() {
 
   return (
     <div className='pb-8'>
-        <h1 className='text-white font-bold flex justify-center text-2xl'>
+        <h1 className='text-white font-bold flex justify-center text-2xl dark:text-black'>
           Categorias:
         </h1>
       <ul className='flex justify-center gap-4'>
       <li key='todos'>
-            <Link className=' my-2 text-white text-center hover:bg-white hover:text-black duration-200 transition ease flex justify-center p-2 border font-semibold rounded-xl' to={`/products/`}>Todos</Link>
+            <Link className=' my-2 text-white text-center hover:bg-white hover:text-black duration-200 transition ease flex justify-center p-2 border font-semibold rounded-xl dark:text-black dark:border-black dark:hover:text-white dark:hover:bg-black' to={`/products/`}>Todos</Link>
           </li>
         {categories.map((category) => (
           <li key={category}>
-            <Link className=' my-2 text-white hover:bg-white hover:text-black duration-200 transition ease text-center flex justify-center p-2 border font-semibold rounded-xl' to={`/category/${category}`}>{category}</Link>
+            <Link className=' my-2 text-white hover:bg-white hover:text-black duration-200 transition ease text-center flex justify-center p-2 border font-semibold rounded-xl dark:text-black dark:border-black dark:hover:text-white dark:hover:bg-black' to={`/category/${category}`}>{category}</Link>
           </li>
         ))}
       </ul>

@@ -1,13 +1,32 @@
 import React from 'react'
-
+import { useState, useEffect } from 'react';
+import './DarkModeButton.css'
 export default function DarkModeButton() {
+  const [darkMode, setDarkMode] = useState(() => {
+    // obtiene el estado del theme, comprueba si esta en dark
+    return localStorage.getItem('theme') === 'dark';
+  });
+
+  const toggleDarkMode = () => {
+    const nuevoDarkMode = !darkMode;
+    setDarkMode(nuevoDarkMode);
+    document.documentElement.setAttribute('data-theme', nuevoDarkMode ? 'dark' : 'light');
+    localStorage.setItem('theme', nuevoDarkMode ? 'dark' : 'light'); //lo guarda en el localstorage
+  };
+
+  useEffect(() => {
+    // actualiza el data-theme
+    document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
+    localStorage.setItem('theme', darkMode ? 'dark' : 'light');
+  }, [darkMode]);
   return (
     <button
-          className="theme-toggle text-white "
+          className="theme-toggle text-white dark:text-black my-auto"
           id="theme-toggle"
           title="Toggles light & dark"
           aria-label="auto"
           aria-live="polite"
+          onClick={toggleDarkMode}
         >
           <svg className="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
             <mask className="moon" id="moon-mask">

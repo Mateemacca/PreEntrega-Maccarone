@@ -29,7 +29,7 @@ export default function Contador({ quantity, setQuantity, stock }) {
       <span
         value={quantity}
         onInput={(e) => setQuantity(parseInt(e.target.innerText, 10))}
-        className='inline-block p-0 text-center w-auto font-bold'
+        className='inline-block p-0 text-center w-auto font-bold dark:text-black'
       >
         {quantity}
       </span>

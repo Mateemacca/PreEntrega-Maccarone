@@ -32,15 +32,15 @@ const SearchOrder = () => {
     <div className=''>
      
         <>
-        <h2 className='text-white font-semibold mb-6 text-2xl'>Ya hiciste una orden? Buscala aqui!</h2>
-      <input className='bg-transparent font-bold text-white border-2 rounded-lg px-1.5 pb-1.5 pt-2 text-md uppercase focus:border-white focus:outline-none focus:ring-0 border-gray-500 placeholder:normal-case placeholder:font-normal'
+        <h2 className='text-white font-semibold mb-6 text-2xl dark:text-black'>Ya hiciste una orden? Buscala aqui!</h2>
+      <input className='bg-transparent font-bold text-white border-2 rounded-lg px-1.5 pb-1.5 pt-2 text-md uppercase focus:border-white dark:focus:border-black dark:text-black focus:outline-none focus:ring-0 border-gray-500 placeholder:normal-case placeholder:font-normal'
         type="text"
         placeholder="Ingrese el ID de la orden"
         maxLength="5"
         value={orderID}
         onChange={(e) => setOrderID(e.target.value)}
       />
-      <button className='text-white ml-4 border-2 border-white p-2 rounded-lg font-semibold hover:bg-white hover:text-black transition ease duration-200 button-glow' onClick={handleSearch}>
+      <button className='text-white ml-4 border-2 border-white p-2 rounded-lg font-semibold dark:text-black dark:border-black dark:hover:bg-black hover:bg-white hover:text-black dark:hover:text-white  transition ease duration-200 button-glow' onClick={handleSearch}>
       {isLoading ? <LoadingSpinner /> : (
       'Buscar Orden'
       )}

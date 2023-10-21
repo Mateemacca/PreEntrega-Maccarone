@@ -7,10 +7,10 @@ export default function Home() {
       <Layout>
         <div className="text-white overflow-y-hidden">
           <div className="page-container align-middle h-full flex mx-auto my-32 flex-col contenedor-texto-blest  ">
-            <div className="flex justify-center align-middle top-0"></div>
+            
             <div className="text-white font-extrabold text-9xl tracking-widest flex justify-center align-middle text-center items-center mx-5 we-are-blest-text dark:text-black top-0">
               <h1>
-                WE. ARE. <strong>BLEST</strong>
+                WE ARE <strong>BLEST</strong>
               </h1>
             </div>
             <div className="flex justify-center">

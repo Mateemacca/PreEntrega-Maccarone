@@ -15,10 +15,10 @@ export default function NavBar() {
   };
  
   return (
-    <nav className="navbar dark:bg-[#000000]">
+    <nav className="navbar dark:#f6f6f6 dark:shadow-2xl">
       <div className="logo">
         <Link to="/">
-          <img src="/imgs/blestlogoblanco.png" alt="Logo Image" className="logo p-0 block" />
+        <img src="/imgs/blestlogoblanco.png" alt="Logo Image" className="dark:hidden"/> <img src="/imgs/blestlogodarkmode.png" alt="Logo Oscuro" className="logo hidden dark:block dark:p-0"/>
         </Link>
       </div>
       <div className={`hamburger ${menuOpen ? 'toggle' : ''}`} onClick={toggleMenu}>
@@ -53,7 +53,7 @@ export default function NavBar() {
           </Link>
         </li>
       </ul>
-      <div className="flex justify-center text-white mx-5 font-bold text-xl navbar-cortes rounded-3xl text-center align-middle mr-12 my-auto dark:bg-[#ffff] dark:text-black">
+      <div className="flex justify-center text-white mx-5 font-bold text-xl navbar-cortes rounded-3xl text-center align-middle mr-12 my-auto bg-transparent dark:text-black">
         <CartWidget />
         <DarkModeButton />
       </div>

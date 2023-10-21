@@ -10,6 +10,8 @@ import CategoryMenu from "../../components/Categories/Categories";
 import { useContext } from "react";
 import { CartCtx } from "../../context/CartContext";
 import './products.css'
+import ItemListContainer from "../../components/ItemListContainer/ItemListContainer";
+import Marquee from "../../components/Marquee/Marquee";
 
 export default function Products() {
   const { idCategory } = useParams();
@@ -50,9 +52,12 @@ export default function Products() {
 
   return (
     <Layout>
+      <div className='mb-10' >
+        <ItemListContainer greeting={<Marquee />} />
+    </div>
       <CategoryMenu />
       {idCategory && (
-        <h2 className="text-white text-center font-bold text-2xl mb-5">
+        <h2 className="text-white text-center font-bold text-2xl mb-5 dark:text-black">
           Mostrando productos de la categoría: {idCategory}
         </h2>
       )}

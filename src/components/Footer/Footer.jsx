@@ -1,16 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './footer.css'
 export default function Footer() {
-    const logo = '/imgs/blestlogoblanco.png'
+    
   return (
-<footer className="dark:bg-white rounded-lg shadow bg-[#161616] ">
-    <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+<footer className="dark:bg-[#f6f6f6]  bg-[#161616]">
+    <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8 dark:bg-[#f6f6f6]">
         <div className="sm:flex sm:items-center sm:justify-between">
             <a href="https://instagram.com/blestbarbershop" target='_blank' className="flex items-center mb-4 sm:mb-0">
-                <img src={logo} className="h-8 mr-3" alt="Blest Logo" />
+                <img src='/imgs/blestlogoblanco.png' className="h-16 mr-3 dark:hidden" alt="Blest Logo" />
+                <img src='/imgs/blestlogodarkmode.png' className="h-16 mr-3 hidden dark:block" alt="Blest Logo" />
                 <span className="self-center dark:text-black text-2xl font-semibold whitespace-nowrap text-white">Blest Barber Shop</span>
             </a>
-            <ul className="flex flex-wrap items-center mb-6 text-sm font-medium dark:text-gray-500  sm:mb-0 text-gray-100">
+            <ul className="flex flex-wrap items-center mb-6 text-sm font-medium dark:text-black  sm:mb-0 text-gray-100">
                 <li>
                     <Link to={'/'} target='_blank' className="mr-4 hover:underline md:mr-6 ">Inicio</Link>
                 </li>

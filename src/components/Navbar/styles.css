@@ -12,9 +12,10 @@
     text-decoration-thickness: 2px !important;
     text-underline-offset: 5px !important;
     text-decoration-color: #fff !important;
-  
   }
-
+  [data-theme='dark'] .pagina-seleccionada{
+    text-decoration-color: #000000 !important;
+  }
   .pagina-seleccionada:hover::before{
     display: block !important;
     
@@ -34,6 +35,10 @@
     font-size: 25px;
     margin: 20px auto;
     top: 1.5px;
+  }
+  [data-theme='dark'] .animated-link::before {
+   
+    background-color: #000000;
   }
  
   
@@ -59,7 +64,7 @@
     
     width: 100vw;
     background-color:#Ffff;
-    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2)!important;
     display: flex;
     transition: background-color .2s ease;
 }
@@ -137,7 +142,49 @@
     transition: all ease-in-out 200ms;
 }
 
+[data-theme="dark"] .nav-links li a::before {
+    
+    background-color: #000000;
+   
+}
+[data-theme="dark"] .nav-links li a:hover {
+    color: rgb(66, 66, 66);
+   
+}
+[data-theme="dark"] .hamburger div{
+    width: 30px;
+    height:3px;
+    background: #000000;
+    margin: 5px;
+    transition: all 0.7s ease;
+}
 
+[data-theme="dark"] .nav-links li a {
+    color: black;
+}
+[data-theme="dark"] strong{
+    text-shadow:0px 0px 50px #343434,0px 0px 20px #2b2b2b;
+    }
+[data-theme="dark"] .toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+    background: #ffffff;
+}
+[data-theme="dark"] .toggle .line2{
+    transition: all 0.7s ease;
+    width:0;
+    background: #ffffff;
+}
+[data-theme="dark"] .toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+    background: #ffffff;
+}
+[data-theme="dark"] .navbar{
+    background-color: #f6f6f6;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2)!important;
+    position: relative;
+    z-index: 999;
+  }
+  
 .hamburger div{
     width: 30px;
     height:3px;
@@ -276,3 +323,4 @@
  .navbar {
     background-color: #161616
   }  
+ 

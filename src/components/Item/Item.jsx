@@ -5,7 +5,7 @@ export default function Item({ id, nombre, precio, descripcion, image }) {
   return (
     <div className="container flex justify-center product-item">
       <div className="max-w-sm ">
-        <div className="bg-white relative shadow-lg hover:shadow-xl transition duration-500 rounded-lg">
+        <div className="bg-white relative shadow-lg hover:shadow-xl transition duration-500 rounded-lg card">
           <Link to={`/product/${id}`}>
             <img
               className="rounded-t-lg w-[400px] h-[400px]"

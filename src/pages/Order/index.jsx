@@ -43,13 +43,13 @@ function OrderPage() {
     <Layout>
       {order && (
         <>
-        <h1 className="text-white mx-auto text-center font-semibold mt-[-36px]">Orden {orderID}:</h1>
+        <h1 className="text-white mx-auto text-center font-semibold mt-[-36px] dark:text-black mb-8">Orden con el id: <span className="bg-stone-300 px-1 py-1 rounded-md">{orderID}</span></h1>
             <div className="mx-auto px-4 sm:px-6 lg:px-8">
                  
     
     <div className="mx-auto mt-8 max-w-md md:mt-2">
 
-      <div className="rounded-3xl bg-white shadow-lg card-glow">
+      <div className="rounded-3xl bg-white shadow-2xl card-glow">
         <div className="px-4 py-6 sm:px-8 sm:py-10 ">
           <div className="flow-root">
             <ul className="-my-8">

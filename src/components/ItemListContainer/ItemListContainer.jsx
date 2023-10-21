@@ -1,9 +1,9 @@
 import React from 'react'
 import './ItemList.css'
-export default function ItemListContainer() {
+export default function ItemListContainer(props) {
   return (
-    <div className="container">
-     
+    <div>
+    {props.greeting}
     </div>
   );
 }
