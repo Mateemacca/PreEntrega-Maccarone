@@ -12,9 +12,9 @@
 <br><br>
 <h2>Algunas screenshots del proyecto:</h2>
 
-<img src="https://i.imgur.com/KybiGua.png" alt="project-screenshot" width="433" height="400/">
+<a href='https://pre-entrega-maccarone-5cqyocxhj-mateemacca.vercel.app/'><img src="https://i.imgur.com/KybiGua.png" alt="project-screenshot" width="433" ></a>
 
-<img src="https://i.imgur.com/tfXs8fE.png" alt="project-screenshot" width="433" height="400/">
+<a href='https://pre-entrega-maccarone-5cqyocxhj-mateemacca.vercel.app/products'><img src="https://i.imgur.com/tfXs8fE.png" alt="project-screenshot" width="433" ></a>
 <br><br>
 
 ## En este proyecto vas a poder navegar entre las páginas:
@@ -62,6 +62,7 @@ $ git clone https://github.com/Mateemacca/PreEntrega-Maccarone
 
 
 *   React JS <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="30" width='30' alt="react logo"  />
+
 *   CSS <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="30" alt="css3 logo"  />
   
 *   TailwindCSS  <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/tailwindcss_logo_icon_167923.png" width="30" alt="tailwindcss logo"  />
