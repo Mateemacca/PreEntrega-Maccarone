@@ -1,6 +1,6 @@
 <h1 align="center" id="title">Blest Barber Shop</h1>
 
-<p align="center"><img src="https://i.imgur.com/d67qbQ2.png" width='100px' alt="project-image"></p>
+<p align="center"><img src="https://i.imgur.com/4RrudtO.png" width='100px' alt="project-image"></p>
 <br>
 
 ## Introducción
@@ -68,9 +68,10 @@ $ git clone https://github.com/Mateemacca/PreEntrega-Maccarone
 *   TailwindCSS  <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/tailwindcss_logo_icon_167923.png" width="30" alt="tailwindcss logo"  />
 
 * Vite <img src="https://skillicons.dev/icons?i=vite" width="30" alt="vite logo"  />
+* SweetAlert <img src='https://sweetalert2.github.io/images/SweetAlert2.png' width='60'  />
 
 <br>
 <hr>
 <br>
 <h2>Espero que te haya gustado mi proyecto, si fue asi no olvides valorarlo en el repositorio de github con una estrella! 😊<h2/>
-<br>
+
